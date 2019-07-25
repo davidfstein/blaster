@@ -70,11 +70,11 @@ if __name__ == '__main__':
                                 help='Local or remote blast. True=local, False=remote.')
     requiredNamed.add_argument('-p', '--Path', action='store', required=True,
                                 help='Path to sequence file.')
-    requiredNamed.add_argument('-c', '--Column', action='store', required=True,
-                                help="The column containing the sequences to be blasted.")
     requiredNamed.add_argument('-d', '--DatabaseName', action='store', required=True,
                                 help="The database against which to blast the sequence.")
     optionalNamed = userInput.add_argument_group('optional arguments')
+    optionalNamed.add_argument('-c', '--Column', action='store', required=False,
+                                default=7 ,help="The column containing the sequences to be blasted.")
     optionalNamed.add_argument('--OffTargetColumn', action='store', required=False,
                                 default=15, help="The column containing the off target alignment value.")
     optionalNamed.add_argument('-e', '--EntrezQuery', action='store', required=False,

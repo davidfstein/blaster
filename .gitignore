@@ -1,0 +1,6 @@
+.csv
+.pyc
+.vscode
+.DS_STORE
+.__pycache__
+.xml
