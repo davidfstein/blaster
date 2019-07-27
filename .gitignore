@@ -1,25 +1,27 @@
-.csv
+*.csv
 
-.pyc
+*.pyc
 
 .vscode
 
 .DS_STORE
 
-.__pycache__
+__pycache__
 
-.xml
+*.xml
 
-.fna
+*.fna
 
-.nhr
+*.nhr
 
-.nin
+*.nin
 
-.nog
+*.nog
 
-.nsd
+*.nsd
 
-.nsi
+*.nsi
 
-.nsq
+*.nsq
+
+*.fa
