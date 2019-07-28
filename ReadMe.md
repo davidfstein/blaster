@@ -1,22 +1,13 @@
-# Install Dependencies
+# Docker entry
 ```
-pip install -r requirements.txt
+docker run --env-file path/to/env_file -it -v path/to/blaster/folder:/app dstein96/blaster:0.1
 ```
-## Install the Blast command line tools
-```
-ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.2.18/ncbi-blast-2.2.18+.dmg
-```
-Follow installation instructions. 
 
-# Running Locally
-## Build a Blast Database
+# Perform a local blast search
 ```
-makeblastdb -in path/to/assembly/fasta -dbtype nucl -parse_seqids -title desired_db_name -out desired_db_name
-```
-Put the outputted files into a folder called *desired_db_name*.
-Here is an example query:
-```
-python blaster.py -l True -p ./chrom_probes.csv -d path/desired_db_name/desired_db_name
+1. alias python=/usr/bin/python3.6
+2. python blaster.py -l True -p ./chrom_probes.csv -d path/to/desired_db_name/desired_db_name
+3. exit (to exit the docker container)
 ```
 
 # Command Line Arguments
