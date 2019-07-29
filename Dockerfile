@@ -12,4 +12,4 @@ RUN yum install -y lftp perl perl-Data-Dumper 'perl(Archive::Tar)' 'perl(Digest:
     yum clean all && \
     rm -rf /var/cache/yum
 
-ENTRYPOINT /bin/bash setup.sh $reference_fasta $blast_db_name && /bin/bash
+ENTRYPOINT /bin/bash setup.sh $reference_fasta $blast_db_name $build_db && /bin/bash

@@ -1,2 +1,3 @@
-reference_fasta=mouse.fna
-blast_db_name=mouse
+reference_fasta=
+blast_db_name=
+build_db=false
