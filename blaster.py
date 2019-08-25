@@ -18,7 +18,7 @@ def read_probes(probe_csv, probe_column, off_target_column):
         lines = [list(line) for line in lines]
         if has_header(lines):
             lines = lines[1:]
-        lines = filter_good_probes(lines, off_target_column)
+        # lines = filter_good_probes(lines, off_target_column)
         return lines[0][0], [line[probe_column] for line in lines]
 
 def filter_good_probes(probe_data, off_target_column):
